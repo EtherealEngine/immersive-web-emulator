@@ -103,6 +103,10 @@ export const toggleStereoMode = (enabled) => {
 	executeAction(EMULATOR_ACTIONS.STEREO_TOGGLE, { enabled });
 };
 
+export const toggleRoomSetup = (enabled) => {
+	executeAction(EMULATOR_ACTIONS.ROOM_SETUP_TOGGLE, { enabled });
+};
+
 export const relayKeyboardEvent = (eventType, eventOptions) => {
 	executeAction(EMULATOR_ACTIONS.KEYBOARD_EVENT, {
 		eventType,

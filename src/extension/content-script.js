@@ -68,6 +68,12 @@ const connection = {
 					});
 					break;
 
+				case EMULATOR_ACTIONS.ROOM_SETUP_TOGGLE:
+					triggerPolyfillAction(POLYFILL_ACTIONS.ROOM_SETUP_TOGGLE, {
+						enabled: message.enabled,
+					});
+					break;
+			
 				case EMULATOR_ACTIONS.EXIT_IMMERSIVE:
 					triggerPolyfillAction(POLYFILL_ACTIONS.EXIT_IMMERSIVE, {});
 					break;

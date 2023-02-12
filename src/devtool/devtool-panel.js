@@ -13,6 +13,7 @@ import {
 	changeEmulatedDeviceType,
 	notifyExitImmersive,
 	toggleStereoMode,
+	toggleRoomSetup,
 } from './js/messenger';
 import { loadDeviceAsset, onResize } from './js/Inspector';
 import {
@@ -44,6 +45,18 @@ const setupHeadsetComponentButtons = () => {
 		EmulatorSettings.instance.write();
 	});
 
+	const roomSetupToggle = document.getElementById('room-setup-toggle');
+	roomSetupToggle.classList.toggle(
+		'button-pressed',
+		EmulatorSettings.instance.roomSetupOn,
+	);
+	roomSetupToggle.addEventListener('click', function () {
+		EmulatorSettings.instance.roomSetupOn = !EmulatorSettings.instance.roomSetupOn;
+		toggleStereoMode(EmulatorSettings.instance.roomSetupOn);
+		this.classList.toggle('button-pressed', EmulatorSettings.instance.roomSetupOn);
+		EmulatorSettings.instance.write();
+	});
+		
 	// document.getElementById('settings').onclick = function () {
 	// 	alert('Emulator settings not yet available');
 	// };

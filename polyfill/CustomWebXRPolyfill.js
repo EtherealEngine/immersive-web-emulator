@@ -15,6 +15,7 @@ import XRRigidTransform from 'webxr-polyfill/src/api/XRRigidTransform';
 import XRSystem from 'webxr-polyfill/src/api/XRSystem';
 import XRTransientInputHitTestResult from './api/XRTransientInputHitTestResult';
 import XRTransientInputHitTestSource from './api/XRTransientInputHitTestSource';
+import XRPlane from './api/XRPlane';
 import { XR_COMPATIBLE } from 'webxr-polyfill/src/constants';
 
 export default class CustomWebXRPolyfill extends WebXRPolyfill {
@@ -119,6 +120,7 @@ export default class CustomWebXRPolyfill extends WebXRPolyfill {
 			return [new XRTransientInputHitTestResult(this, results, inputSource)];
 		};
 
+		XRFrame.prototype.detectedPlanes = new Set();
 		//
 
 		if (this.nativeWebXR) {

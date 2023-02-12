@@ -16,6 +16,7 @@ export const EMULATOR_ACTIONS = {
 	DEVICE_TYPE_CHANGE: 'ea-device-type-change',
 	STEREO_TOGGLE: 'ea-stereo-toggle',
 	KEYBOARD_EVENT: 'ea-keyboard-event',
+	ROOM_SETUP_TOGGLE: 'ea-room-setup-toggle',
 	EXIT_IMMERSIVE: 'ea-exit-immersive',
 };
 
@@ -29,6 +30,7 @@ export const POLYFILL_ACTIONS = {
 	ANALOG_VALUE_CHANGE: 'pa-analog-value-change',
 	DEVICE_TYPE_CHANGE: 'pa-device-type-change',
 	STEREO_TOGGLE: 'pa-stereo-toggle',
+	ROOM_SETUP_TOGGLE: 'pa-room-setup-toggle',
 	KEYBOARD_EVENT: 'pa-keyboard-event',
 	EXIT_IMMERSIVE: 'pa-exit-immersive',
 	DEVICE_INIT: 'pa-device-init',
